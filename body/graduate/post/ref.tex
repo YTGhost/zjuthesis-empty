@@ -1,0 +1,23 @@
+\cleardoublepage
+
+\renewcommand{\bibfont}{\zihao{-4}\fangsong} % 设置参考文献字体为小四号仿宋
+\setlength{\bibitemsep}{0pt}             % 设置条目之间无额外间距
+\setlength{\biblabelsep}{1em}            % 标签和正文之间的间距
+\setlength{\bibhang}{0em}                % 首行缩进设为 0
+
+
+\renewcommand{\bibsetup}{%
+    \leading{20pt}%    % 设置精确的20pt行距
+}
+
+\renewcommand{\itemcmd}{%
+    \leavevmode
+    \addvspace{\bibitemsep}%恢复\bibitemsep的作用
+    \mkgbnumlabel{\printfield{labelnumber}}%
+    \hspace{0.2em}
+}
+
+\begingroup
+    \linespreadsingle{}
+    \printbibliography[title={参考文献}]
+\endgroup
